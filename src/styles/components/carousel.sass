@@ -1,0 +1,28 @@
+@use '../variables'
+
+.carousel
+    display: flex
+    overflow: auto
+    position: relative
+
+    .image
+        width: 100%
+
+    .button
+        border-radius: 50%
+        border: none
+        padding: 1rem
+        display: flex
+
+        &:first-child
+            position: absolute
+            left: 5%
+            top: 50%
+
+        &:last-child
+            position: absolute
+            right: 5%
+            top: 50%
+
+        &_image
+            width: 10px

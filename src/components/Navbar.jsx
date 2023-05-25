@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className="navbar">
             <img className='menu' src={iconMenu} alt="Icon menu" />
             <img className='logo' src={iconLogo} alt="logo" />
-            <ul>{topicsList}</ul>
+            <ul className='topics'>{topicsList}</ul>
             <img className='cart' src={iconCart} alt="Icon cart" />
             <img className='user' src={imageUser} alt="Image user" />
         </nav>
