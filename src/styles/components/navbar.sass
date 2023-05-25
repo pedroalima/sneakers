@@ -1,0 +1,58 @@
+@use '../variables'
+
+.navbar
+    display: flex
+    justify-content: space-around
+    align-items: flex-end
+    padding: 1.5rem 0.5rem
+
+    .logo
+        margin-right: 5rem
+
+    ul
+        display: none
+
+    .user
+        width: 25px
+
+@media screen and ( min-width: 1360px )
+    .navbar
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin: 0 8rem
+        padding: 2rem 0
+        border-bottom: 1px solid variables.$Grayish-blue
+
+        .menu
+            display: none
+
+        .logo
+            margin-right: 2rem
+
+        ul
+            display: flex
+            gap: 2rem
+            margin-right: 27vw
+
+            a
+                text-decoration: none
+                color: variables.$Dark-grayish-blue
+                padding: 2.6rem 0
+                border-bottom: 4px solid rgba(0, 0, 0, 0)
+
+                &:hover
+                    border-bottom: 4px solid variables.$Orange
+
+        .cart
+            cursor: pointer
+
+        .user
+            margin-left: 2rem
+            width: 45px
+            cursor: pointer
+            border-radius: 50%
+            padding: 0.1rem
+
+            &:hover
+                background: variables.$Orange
