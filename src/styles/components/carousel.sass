@@ -1,28 +1,81 @@
 @use '../variables'
 
 .carousel
-    display: flex
-    overflow: auto
-    position: relative
 
-    .image
-        width: 100%
-
-    .button
-        border-radius: 50%
-        border: none
-        padding: 1rem
+    @media screen and ( min-width: 1360px )
         display: flex
+        flex-direction: column
+        padding: 0rem 4rem
+        gap: 1.5rem
+        width: 50%
 
-        &:first-child
-            position: absolute
-            left: 5%
-            top: 50%
+    &_image
+        display: flex
+        overflow: auto
+        position: relative
 
-        &:last-child
-            position: absolute
-            right: 5%
-            top: 50%
+        @media screen and ( min-width: 1360px )
+            width: 83%
+            border-radius: 10px
+            flex-direction: column
 
-        &_image
-            width: 10px
+        .image
+            width: 100%
+
+        .button
+            background: none
+            border: none
+            border-radius: 50%
+            padding: 0
+
+            @media screen and ( min-width: 1360px )
+                display: none
+
+            &:first-child
+                position: absolute
+                left: 5%
+                top: 50%
+
+            &:last-child
+                position: absolute
+                right: 5%
+                top: 50%
+
+            &_image
+                border-radius: 50%
+                padding: 1rem
+                background: variables.$body-bg-color
+
+    &_thumbnails
+        display: none
+
+        @media screen and ( min-width: 1360px )
+            display: flex
+            gap: 1.5rem
+            width: 83%
+
+        .thumbnail_container
+
+            &_input
+                @media screen and ( min-width: 1360px )
+                    display: none
+
+                    &:checked ~ label
+                        border: 2px solid variables.$Orange
+
+                    &:checked ~ label img
+                        opacity: 0.3
+
+            &_label
+                @media screen and ( min-width: 1360px )
+                    padding: 3.1rem 0.2rem 0
+                    border-radius: 10px
+
+                &_image
+                    @media screen and ( min-width: 1360px )
+                        width: 63px
+                        border-radius: 10px
+                        cursor: pointer
+
+                        &:hover
+                            opacity: 0.3
