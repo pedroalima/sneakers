@@ -1,6 +1,6 @@
-![#](?????????)
+![#](./public/logo%201.svg)
 
-Projeto construído a partir do challenge disponível do [FrontendMentor](?????????). Utilizei o design fornecido pela plataforma e elaborei a página da forma mais fidedigna possível, desenvolvido com React, JavaScript, SASS, CSS e HTML. E esse foi o meu resultado final 💻<?????????>.
+Projeto de uma homepage de produtos de ecommerce, construída a partir do challenge disponível do [FrontendMentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Utilizei o design fornecido pela plataforma e elaborei a página da forma mais fidedigna possível, desenvolvido com React, JavaScript, SASS, CSS e HTML. E esse foi o meu resultado final 💻<https://sneakers-one-zeta.vercel.app/>.
 
 ![#](?????????)
 
@@ -10,13 +10,20 @@ Projeto construído a partir do challenge disponível do [FrontendMentor](??????
 
 ## 🎯 Objetivos
 
-Elaborar um website que se aproxime o máximo possivel da imagem de referência.
+### Design
 
-Os usuários devem ser capazes de:
+Elaborar uma homepage que se aproxime o máximo possivel da imagem de referência.
 
 > - Visualizar o layout ideal para o aplicativo, dependendo do tamanho da tela do dispositivo
 > - Visualizar os estados de foco para todos os elementos interativos na página
-> - Navegar entre seções através das setas.
+
+### Funcionalidades
+
+Os usuários devem ser capazes de:
+
+> - Altere a imagem grande do produto clicando nas miniaturas
+> - Adicionar itens ao carrinho
+> - Visualizar o carrinho e remova itens dele
 
 </br>
 
@@ -34,7 +41,7 @@ Os usuários devem ser capazes de:
 
 Vários conceitos foram abordados como:
 
-> - ReactJS (Uso do create-react-app, manipulação dos elementos JSX e DOM virtual, criação de componentes e utilização de hooks).
+> - ReactJS (Uso do Vite, manipulação e tipificação de props, criação de componentes e utilização de hooks).
 > - JavaScript (Manipulação de objetos e arrays, criação de condicionais com operador ternário).
 > - SASS (Variáveis).
 
