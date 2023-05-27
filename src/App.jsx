@@ -6,14 +6,14 @@ import './styles/components/app.sass';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header>
         <Navbar/>
       </header>
       <main>
         <Carousel/>
       </main>
-    </div>
+    </>
   );
 }
 
