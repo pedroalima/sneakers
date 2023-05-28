@@ -1,0 +1,87 @@
+@use '../variables'
+
+.description
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1.2rem
+    padding: 1.5rem
+
+    &_company
+        text-transform: uppercase
+        font-size: 12px
+        font-weight: 600
+        color: variables.$effects-color
+        letter-spacing: 1px
+
+    &_title
+        font-size: 28px
+        line-height: 2rem
+        font-weight: 700
+        color: variables.$font-primary-color
+
+    &_info
+        font-size: 15px
+        line-height: 1.5rem
+        color: variables.$font-secondary-color
+
+    &_container_price
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+
+        .value
+            font-size: 28px
+            font-weight: 700
+            color: variables.$font-primary-color
+
+        .discount
+            padding: 0.2rem 0.4rem
+            border-radius: 7px
+            background: variables.$font-bg-color
+            color: variables.$effects-color
+            font-weight: 700
+            margin-right: 5rem
+
+        .price
+            color: variables.$border-color
+            font-weight: 700
+            text-decoration: line-through
+
+    &_container_counter
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        padding: 1rem 1.5rem
+        border-radius: 12px
+        background: variables.$Light-grayish-blue
+
+        .counter
+            font-weight: 700
+            color: variables.$font-primary-color
+
+        .plus
+            padding: 0.5rem
+
+        .minus
+            padding: 0.5rem
+
+    &_button
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1.5rem
+        width: 100%
+        background: variables.$effects-color
+        padding: 1rem 1.5rem
+        border-radius: 12px
+
+        .icon
+            color: variables.$body-bg-color
+
+        .text
+            color: variables.$body-bg-color
+            font-weight: 700
+            font-family: variables.$font-stack

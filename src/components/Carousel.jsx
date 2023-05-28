@@ -54,7 +54,7 @@ function Carousel() {
   ))
 
   return (
-    <div className='carousel'>
+    <section className='carousel'>
       <div className='carousel_image'>
         <button onClick={togglePreviousImage} className='button'>
           <img className='button_image' src={arrowIconPrevious} alt="" />
@@ -67,7 +67,7 @@ function Carousel() {
       <ul className='carousel_thumbnails'>
         {productList}
       </ul>
-    </div>
+    </section>
   )
 }
 
