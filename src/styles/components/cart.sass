@@ -1,0 +1,77 @@
+@use '../variables'
+
+.container_cart
+    position: absolute
+    z-index: 1
+    top: 80px
+    left: 0px
+    width: 96.2%
+    transform: translate(2%, 0%)
+    background: variables.$body-bg-color
+    border-radius: 10px
+
+    &_header
+        padding: 1.5rem
+        border-bottom: 1px solid variables.$border-color
+
+        span
+            font-weight: 700
+            color: variables.$font-primary-color
+
+    &_content
+        padding: 1.5rem
+
+        &_product
+            display: grid
+            grid-template-areas: "thumb title button" "thumb info button"
+            grid-template-columns: 1fr 6fr 0.5fr
+            grid-template-rows: 1fr 1fr
+            gap: 0.5rem
+            margin-bottom: 1.5rem
+
+            &_thumb
+                grid-area: thumb
+                width: 40px
+                border-radius: 5px
+
+            &_title
+                grid-area: title
+                font-size: 17px
+                color: variables.$font-secondary-color
+
+            &_info
+                grid-area: info
+                color: variables.$font-secondary-color
+
+                &_price
+
+                &_value
+                    color: variables.$font-primary-color
+                    font-weight: 700
+
+            &_button
+                grid-area: button
+                text-align: end
+
+                &_delete
+                    width: 15px
+
+        &_button
+            width: 100%
+            background: variables.$effects-color
+            padding: 1rem 1.5rem
+            border-radius: 12px
+            color: variables.$body-bg-color
+            font-family: variables.$font-stack
+            font-weight: 700
+
+    &_content_empty
+        width: 100%
+        min-height: 30vh
+        display: flex
+        justify-content: center
+        align-items: center
+
+        span
+            color: variables.$font-secondary-color
+            font-weight: 600

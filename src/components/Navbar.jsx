@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
+import Cart from './Cart';
 
 import '../styles/components/navbar.sass';
 
@@ -10,7 +11,7 @@ import imageUser from '../images/image-avatar.png';
 import iconClose from '../images/icon-close.svg';
 
 const Navbar = () => {
-    const [ active, setActive ] = useState(true);
+    const [ menu, setMenu ] = useState(true);
 
     const topics = ["Collections", "Men", "Women", "About", "Contact"];
     const topicsList = topics.map((topic, i) => 
@@ -22,7 +23,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar">
-                <button type='button' className='button' onClick={() => setActive(false)}>
+                <button type='button' className='button' onClick={() => setMenu(false)}>
                     <img className='button_menu' src={iconMenu} alt="Icon menu" />
                 </button>
                 <h1>
@@ -34,8 +35,9 @@ const Navbar = () => {
                 <img className='cart' src={iconCart} alt="Icon cart" />
                 <img className='user' src={imageUser} alt="Image user" />
             </nav>
-            {!active && <MobileMenu onClick={() => setActive(true)} image={iconClose} topics={topicsList}/>}
-            {!active && <div className='fade'></div>}
+            {!menu && <MobileMenu onClick={() => setMenu(true)} image={iconClose} topics={topicsList}/>}
+            {!menu && <div className='fade'></div>}
+            <Cart/>
         </>
     );
 }

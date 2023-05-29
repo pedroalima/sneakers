@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Price from './Price';
-import Counter from './Counter'
+import Counter from './Counter';
 
-import '../styles/components/description.sass'
+import '../styles/components/description.sass';
 
 import iconPlus from '../images/icon-plus.svg';
 import iconMinus from '../images/icon-minus.svg';
