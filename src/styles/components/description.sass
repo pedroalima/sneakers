@@ -7,6 +7,14 @@
     gap: 1.2rem
     padding: 1.5rem 1.5rem 5rem
 
+    @media screen and ( min-width: 1360px )
+        display: grid
+        grid-template-areas: "company ." "title title" "info info " "price ." "counter button"
+        grid-template-columns: 1fr 1.5fr
+        grid-template-rows: 0.2fr 1.2fr 1.4fr 1fr 1fr
+        align-items: center
+        padding: 1.5rem 5rem 2rem
+
     &_company
         text-transform: uppercase
         font-size: 12px
@@ -14,22 +22,37 @@
         color: variables.$effects-color
         letter-spacing: 1px
 
+        @media screen and ( min-width: 1360px )
+            grid-area: company
+
     &_title
         font-size: 28px
         line-height: 2rem
         font-weight: 700
         color: variables.$font-primary-color
 
+        @media screen and ( min-width: 1360px )
+            grid-area: title
+            font-size: 38px
+
     &_info
         font-size: 15px
         line-height: 1.5rem
         color: variables.$font-secondary-color
+
+        @media screen and ( min-width: 1360px )
+            grid-area: info
 
     &_container_price
         display: flex
         justify-content: space-between
         align-items: center
         width: 100%
+
+        @media screen and ( min-width: 1360px )
+            grid-area: price
+            display: flex
+            flex-wrap: wrap
 
         .value
             font-size: 28px
@@ -43,6 +66,9 @@
             color: variables.$effects-color
             font-weight: 700
             margin-right: 5rem
+
+            @media screen and ( min-width: 1360px )
+                margin-right: 0
 
         .price
             color: variables.$border-color
@@ -58,15 +84,20 @@
         border-radius: 12px
         background: variables.$Light-grayish-blue
 
+        @media screen and ( min-width: 1360px )
+            grid-area: counter
+
         .counter
             font-weight: 700
             color: variables.$font-primary-color
 
         .plus
             padding: 0.5rem
+            cursor: pointer
 
         .minus
             padding: 0.5rem
+            cursor: pointer
 
     &_button
         display: flex
@@ -76,8 +107,15 @@
         width: 100%
         background: variables.$effects-color
         padding: 1rem 1.5rem
+        cursor: pointer
         border-radius: 12px
         box-shadow: 2px 23px 50px -18px variables.$effects-color
+
+        @media screen and ( min-width: 1360px )
+            grid-area: button
+
+            &:hover
+                opacity: 0.5
 
         .icon
             color: variables.$body-bg-color

@@ -12,6 +12,7 @@ import iconClose from '../images/icon-close.svg';
 
 const Navbar = () => {
     const [ menu, setMenu ] = useState(true);
+    const [ cart, setCart ] = useState(true);
 
     const topics = ["Collections", "Men", "Women", "About", "Contact"];
     const topicsList = topics.map((topic, i) => 
@@ -19,6 +20,16 @@ const Navbar = () => {
             <a href="#">{topic}</a>
         </li>
     );
+
+    function toggleStatusCart() {
+        setCart((prev) => {
+            if (prev === true) {
+                return !prev;
+            } else {
+                return !prev;
+            }
+        })
+    }
 
     return (
         <>
@@ -32,12 +43,12 @@ const Navbar = () => {
                 <ul className='topics'>
                     {topicsList}
                 </ul>
-                <img className='cart' src={iconCart} alt="Icon cart" />
+                <img onClick={toggleStatusCart} className='cart' src={iconCart} alt="Icon cart" />
                 <img className='user' src={imageUser} alt="Image user" />
             </nav>
             {!menu && <MobileMenu onClick={() => setMenu(true)} image={iconClose} topics={topicsList}/>}
             {!menu && <div className='fade'></div>}
-            <Cart/>
+            {!cart && <Cart/>}
         </>
     );
 }

@@ -4,11 +4,17 @@
     position: absolute
     z-index: 1
     top: 80px
-    left: 0px
     width: 96.2%
     transform: translate(2%, 0%)
     background: variables.$body-bg-color
     border-radius: 10px
+
+    @media screen and ( min-width: 1360px )
+        top: 80%
+        right: 5%
+        transform: none
+        width: 25%
+        box-shadow: 0 20px 90px -50px #3f3f3f
 
     &_header
         padding: 1.5rem
@@ -42,8 +48,6 @@
             &_info
                 grid-area: info
                 color: variables.$font-secondary-color
-
-                &_price
 
                 &_value
                     color: variables.$font-primary-color
