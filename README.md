@@ -83,9 +83,11 @@ Para conferir a versão final é só acessar o link: 💻<https://sneakers-one-z
 
 Observação: os testes referente ao layout e responsividade foram realizadas somente utilizando as resoluções 375px e 1360px.
 
-<video>
-    <source src="./public/video.mp4" type="video/mp4">
-<video>
+<html>
+    <video>
+        <source src="./public/video.mp4" type="video/mp4">
+    </video>
+</html>
 
 </br>
 
