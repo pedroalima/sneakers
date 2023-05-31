@@ -1,6 +1,6 @@
 ![#](./public/logo%201.svg)
 
-Projeto de uma homepage de produtos de ecommerce, construída a partir do challenge disponível do [FrontendMentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Utilizei o design fornecido pela plataforma e elaborei a página da forma mais fidedigna possível, desenvolvido com React.js e SASS. E esse foi o meu resultado final 💻<https://sneakers-one-zeta.vercel.app/>.
+Projeto de uma homepage de produtos de e-commerce, construída a partir do desafio disponível do [FrontendMentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Utilizei o design fornecido pela plataforma e elaborei a página da maneira mais fidedigna possível, desenvolvido com React.js e SASS. E esse foi o meu resultado final 💻<https://sneakers-one-zeta.vercel.app/>.
 
 ![#](./public/Mask%20group.svg)
 
@@ -12,7 +12,7 @@ Projeto de uma homepage de produtos de ecommerce, construída a partir do challe
 
 ### Design
 
-Elaborar uma homepage que se aproxime o máximo possivel da imagem de referência.
+Elaborar uma homepage que se aproxime o máximo possível da imagem de referência.
 
 > - Visualizar o layout ideal para o aplicativo, dependendo do tamanho da tela do dispositivo
 > - Visualizar os estados de foco para todos os elementos interativos na página
@@ -22,7 +22,7 @@ Elaborar uma homepage que se aproxime o máximo possivel da imagem de referênci
 Os usuários devem ser capazes de:
 
 > - Alterar a imagem grande do produto clicando nas miniaturas
-> - Vizualizar o menu hamburguer na versão mobile
+> - Utilizar o menu hamburguer na versão mobile
 > - Visualizar o carrinho em ambas as versões
 
 </br>
@@ -40,17 +40,40 @@ Os usuários devem ser capazes de:
 
 ## 🧠 Meu aprendizado
 
-Vários conceitos foram abordados como:
+Vários conceitos foram abordados, com foco no ReactJS, como:
 
-> - ReactJS (Uso do Vite, manipulação e tipificação de props, criação de componentes e utilização do hook state).
+> - Vite
+> - PROPS
+> - Componentização
+> - Hooks
 
-<!-- O projeto foi responsável por me introduzir ao framework React, me abrindo um mundo de possibilidades. Ainda estou buscando compreender a componentização, compreendo que é um benefício grandioso, mas que demanda muita prática. -->
+Para dar início ao projeto optei por utilizar o Vite, por sua simples integração com React e SASS. Desse modo, no desenvolvimento foquei na construção dos componentes usando seus atributos com "props", sua estrutura de objeto deixa a documentação mais clara e intuitiva. Com o auxilio da componentização, a aplicação do State Hook foi explorada em todas as possíveis aplicações da página, contribuindo de maneira prática.
 
 React.js
 
 ```js
 ...
+const [ counter, setCounter ] = useState(0);
+
+const goBack = () => {
+    setCounter((prev) => {
+        if(counter > 0) {
+            return prev - 1;
+        } else {
+            return prev;
+        }
+    })
+};
+
+const goToNext = () => {
+    setCounter((prev) => {
+        return prev + 1;
+    })
+};
+...
 ```
+
+Acima temos uma aplicação do Hook useState. No decorrer do projeto surgiu a necessidade de ser criado um contador de produtos, que determina a quantidade de produtos que serão comprados. A função é perfeita para essa situação, onde precisamos incrementar ou decrementar números.
 
 </br>
 
@@ -59,6 +82,10 @@ React.js
 Para conferir a versão final é só acessar o link: 💻<https://sneakers-one-zeta.vercel.app/>.
 
 Observação: os testes referente ao layout e responsividade foram realizadas somente utilizando as resoluções 375px e 1360px.
+
+<video>
+    <source src="./public/video.mp4" type="video/mp4">
+<video>
 
 </br>
 
